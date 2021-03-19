@@ -11,28 +11,46 @@
 	<groupId>com.lming.ltts</groupId>
 	<artifactId>ltts-basic</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ltts-basic</name>
+	<name>ltts-basic [Ltts-基础应用平台]</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<springboot.version>2.4.4</springboot.version>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
+	<modules>
+		<module>ltts-basics</module>
+		<module>ltts-common</module>
+		<module>ltts-utils</module>
+		<module>ltts-components</module>
+	</modules>
 
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>${springboot.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
+
+
 
 	<build>
 		<plugins>

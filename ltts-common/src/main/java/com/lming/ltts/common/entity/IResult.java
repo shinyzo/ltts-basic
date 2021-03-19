@@ -9,10 +9,4 @@ import java.io.Serializable;
  */
 public interface IResult<T> extends Serializable {
 
-    public Integer getCode();
-
-    public String getMessage();
-
-    public T getData();
-
 }

@@ -1,5 +1,6 @@
 package com.lming.ltts.common.emuns;
 
+import com.lming.ltts.common.interfaces.ResultInterface;
 import lombok.Getter;
 
 /**
@@ -8,7 +9,7 @@ import lombok.Getter;
  * 3 * @Descripiton:
  */
 @Getter
-public enum ResultEnum {
+public enum ResultEnum implements ResultInterface {
 
     SUCCESS(200,"成功"),
 
