@@ -35,13 +35,22 @@ public class JsonResult<T> implements IResult{
     private T data;
 
 
-
+    /**
+     * 快速成功 采用默认的成功
+     * @param data
+     * @param <T>
+     * @return
+     */
     public static <T> JsonResult success(T data){
 
         return new JsonResult(ResultEnum.SUCCESS.getCode(),ResultEnum.SUCCESS.getMessage(),data);
     }
 
-
+    /**
+     * 快速失败 采用默认的失败
+     * @param <T>
+     * @return
+     */
     public static <T> JsonResult failed(){
 
         return failed(ResultEnum.FAILED);
