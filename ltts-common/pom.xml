@@ -6,37 +6,16 @@
 		<groupId>com.lming.ltts</groupId>
 		<artifactId>ltts-basic</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lming.ltts</groupId>
 	<artifactId>ltts-common</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ltts-common [Ltts-公共模块]</name>
 	<description>Demo project for Spring Boot</description>
+    <packaging>jar</packaging>
+
 	<properties>
 		<java.version>8</java.version>
 	</properties>
-
-
-	<dependencies>
-
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

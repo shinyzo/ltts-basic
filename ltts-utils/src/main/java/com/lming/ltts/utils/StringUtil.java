@@ -7,5 +7,8 @@ package com.lming.ltts.utils;
  */
 public class StringUtil {
 
+    public static void main(String[] args) {
+
+    }
 
 }

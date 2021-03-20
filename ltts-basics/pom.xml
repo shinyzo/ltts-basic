@@ -6,13 +6,12 @@
         <groupId>com.lming.ltts</groupId>
         <artifactId>ltts-basic</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>com.lming.ltts</groupId>
     <artifactId>ltts-basics</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ltts-basics</name>
+    <name>ltts-basics [Ltts-基础应用]</name>
     <description>Demo project for Spring Boot</description>
     <packaging>jar</packaging>
 
