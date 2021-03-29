@@ -8,25 +8,25 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Date: 2021/3/20 1:17.
  * Description:  java vm 的内存进行数据缓存，线程安全
  */
-public final class JavaMemoryCache<K,V> implements ICache<K,V> {
+public final class JVMMemoryCache<K,V> implements ICache<K,V> {
 
     // 保证更新操作的原子性
     private final Map<K,V> map = new ConcurrentHashMap<K,V>();
 
-    private static  JavaMemoryCache instance = null;
+    private static JVMMemoryCache instance = null;
 
-    private JavaMemoryCache(){
+    private JVMMemoryCache(){
     }
 
     /**
      * double check single instance
      * @return
      */
-    public static JavaMemoryCache getInstance(){
+    public static JVMMemoryCache getInstance(){
         if(instance == null){
-            synchronized (JavaMemoryCache.class){
+            synchronized (JVMMemoryCache.class){
                 if(instance ==null){
-                    instance = new JavaMemoryCache();
+                    instance = new JVMMemoryCache();
                 }
             }
         }
@@ -49,7 +49,7 @@ public final class JavaMemoryCache<K,V> implements ICache<K,V> {
     }
 
     public static void main(String[] args) {
-        JavaMemoryCache<String,String> javaMemoryCache =  JavaMemoryCache.getInstance();
+        JVMMemoryCache<String,String> javaMemoryCache =  JVMMemoryCache.getInstance();
         javaMemoryCache.put("aa","bb");
         javaMemoryCache.put("aa","cc");
         String aa = javaMemoryCache.get("aa");
